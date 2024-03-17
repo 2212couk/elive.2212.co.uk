@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2212 Live - Event Live Streaming Service</title>
+<style>
+  /* Resetting default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+	margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+	
+  }
+  
+  .container {
+    max-width: 100%; /* Set max-width to 100% to cover full width */
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .hero-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 0;
+    overflow: hidden;
+	color: #fff;
+    height: 100vh; /* Set height to viewport height */
+  }
+
+
+  
+  .hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  filter: blur(10px); /* Apply blur effect */
+}
+
+
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e64a19;
+  }
+  
+  .features-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .feature {
+    margin-bottom: 40px;
+  }
+  
+  .feature img {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .feature h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1.1em;
+  }
+  
+  .pricing-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .pricing-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .scroll-down {
+  color: #000;
+  margin-top: 250px
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <section class="hero-section">
+    <video autoplay loop muted class="hero-video">
+      <source src="indexheadervideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content" id="herocontent">
+      <h1>Welcome to our Event Live Streaming Service</h1>
+      <p>Experience the excitement of live events from anywhere in the world.</p>
+      <a href="pin.html" class="cta-button">Watch Now</a>
+    </div>
+	<div class="scroll-down">
+       
+        <div class="arrow"><b>&#x25BC;</b></div> <!-- Black downwards arrow head -->
+		 <p><b>Scroll Down</b></p>
+		 
+		 
+		 </div>
+		 
+  </section>
+  
+  <section class="features-section">
+    <div class="feature">
+      <img src="https://cdn-icons-png.freepik.com/512/251/251863.png" alt="Live Streaming Icon">
+      <h2>Live Streaming</h2>
+      <p>Watch events live as they happen in real-time.</p>
+    </div>
+
+    <div class="feature">
+      <img src="https://www.tasis.ch/uploaded/Logos/line_icons/line_icon_549.png" alt="Access Anywhere Icon">
+      <h2>Access Anywhere</h2>
+      <p>Access our service from anywhere in the world on any device.</p>
+    </div>
+
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/183/183683.png" alt="On-Demand Icon">
+      <h2>On-Demand</h2>
+      <p>Missed a live event? Catch up later with our on-demand feature.</p>
+    </div>
+  </section>
+  
+  <section class="pricing-section">
+    <h2>Pricing</h2>
+    <p>Our pricing is simple and transparent:</p>
+    <p>£17 per hour</p>
+  </section>
+</div>
+
+<footer>
+  <p>2212 Live - Event Live Streaming Service</p>
+  <p>Phone: 020 8050 2212 | Email: info@elive.2212.co.uk</p>
+  <p>&copy; 2024 2212 Live. All rights reserved.</p>
+</footer>
+
+
+<script>
+  window.onload = function() {
+    var heroContent = document.getElementById('herocontent');
+    if (heroContent) {
+      heroContent.scrollIntoView();
+    }
+  };
+</script>
+
+
+<script>
+// Parallax effect for the video
+window.addEventListener('scroll', function() {
+  let scrollPosition = window.pageYOffset;
+  let video = document.querySelector('.hero-video');
+  video.style.top = scrollPosition * 0.5 + 'px'; // Adjust scroll speed here
+});
+</script>
+
+</body>
+</html>
